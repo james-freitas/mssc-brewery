@@ -4,7 +4,7 @@ import com.codeonblue.msscbrewery.domain.Beer;
 import com.codeonblue.msscbrewery.web.model.BeerDto;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(uses = {DateMapper.class})
 public interface BeerMapper {
 
     BeerDto beerToBeerDto(Beer beer);
